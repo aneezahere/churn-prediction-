@@ -9,7 +9,7 @@ hidden = [".pythonlibs", ".streamlit"]
 channel = "stable-24_05"
 
 [deployment]
-run = ["streamlit", "run", "--server.enableCORS=false", "--server.enableWebsocketCompression=false", "--server.runOnSave=false", "main.py"]
+run = ["sh", "-c", "streamlit run streamlit_app.py --server.enableWebsocketCompression=false"]
 ignorePorts = false
 deploymentTarget = "gce"
 
